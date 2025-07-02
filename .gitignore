@@ -1,0 +1,11 @@
+*
+!/.gitignore
+!/wp-content/
+​/wp-content/*
+!/wp-content/themes/
+​/wp-content/themes/*
+!/wp-content/themes/practice-theme/
+!/wp-content/themes/practice-theme/**
+.DS_Store
+node_modules/
+dist/
