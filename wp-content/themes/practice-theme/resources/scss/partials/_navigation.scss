@@ -1,0 +1,132 @@
+.main-navigation {
+  display: none; 
+}
+
+.site-menu {
+  .menu-toggle--open {
+    display: block;
+  }
+  .menu-toggle--close {
+    display: none;
+  }
+
+  &.is-open {
+    .menu-toggle--open { display: none; }
+    .menu-toggle--close { display: block; }
+  }
+
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -50vw;
+    width: 50vw;
+    height: 100vh;
+    background: $wp-preset-color-black;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+
+    &.is-open {
+      right: 0;
+
+      &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: $wp-preset-spacing-50;
+      right: -0.3rem;
+      margin-top: -3px;
+
+      .menu-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+        cursor: pointer;
+      }
+    }
+
+    &__items {
+      margin-top: 3.5rem;
+      flex: 1;
+      position: relative;
+      background: $wp-preset-color-black;
+      padding: $wp-preset-spacing-40;
+
+      .primary-menu {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        line-height: 1.4;
+
+        li.menu-item {
+          margin-bottom: $wp-preset-spacing-40;
+
+          a {
+            display: block;
+            color: $wp-preset-color-white;
+            font-size: $wp-preset-font-size-normal;
+            text-decoration: none;
+          }
+        }
+
+        & li.menu-item-join-us > a {
+          display: inline-block;
+          background: $wp-preset-gradient-sunny-day;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  
+  .site-menu {
+    .menu-toggle { display: none; }
+    .side-menu { display: none !important; }
+  }
+
+  .main-navigation {
+    display: block;
+    position: static;
+    background: none;
+    color: white;
+    width: auto;
+    padding: 0;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li.menu-item {
+        margin-right: $wp-preset-spacing-60;
+
+        a {
+          color: $wp-preset-color-white;
+          text-decoration: none;
+          font-size: $wp-preset-spacing-50;
+        }
+      }
+
+      li.menu-item-join-us > a {
+        background: $wp-preset-gradient-sunny-day;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
