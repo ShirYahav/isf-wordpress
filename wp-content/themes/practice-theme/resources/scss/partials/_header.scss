@@ -11,15 +11,6 @@
   justify-content: space-between;
   transition: 0.1s ease;
 
-  &.is-menu-open {
-    background-color: transparent;
-
-    .site-branding {
-      position: relative;
-      z-index: 1001;
-    }
-  }
-
   .site-branding {
     a {
       display: inline-block;
@@ -49,6 +40,19 @@
 
   .header-grid {
     align-items: baseline;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-header {
+    &.is-menu-open {
+      background-color: transparent;
+
+      .site-branding {
+        position: relative;
+        z-index: 1001;
+      }
+    }
   }
 }
 
