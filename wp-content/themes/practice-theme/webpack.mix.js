@@ -7,4 +7,16 @@ mix
   .copyDirectory('resources/fonts', 'dist/fonts')
   .copyDirectory('resources/images', 'dist/images')
   .version()
-  .sourceMaps();
+  .sourceMaps()
+
+  //live-reload during developmen
+  .browserSync({
+    proxy: 'localhost:8000',     
+    files: [
+      'dist/css/*.css',      
+      'dist/js/*.js',          
+      '**/*.php'                
+    ],
+    injectChanges: true,     
+    open: false,      
+  });

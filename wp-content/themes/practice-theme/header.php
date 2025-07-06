@@ -20,21 +20,23 @@ $label_close = __('Close menu',  'practice-theme');
 <body <?php body_class(); ?>>
   <header id="site-header" class="site-header">
 
-    <div class="site-branding">
+    <div class="header-logo">
       <a href="<?php echo esc_url(home_url('/')); ?>">
         <img
-          src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/no-bg-logo-1.svg'); ?>"
+          src="<?php echo esc_url(get_template_directory_uri() . '/dist/images/isf-logo.svg'); ?>"
           alt="<?php bloginfo('name'); ?> logo"
-          class="site-logo" />
+          class="img-logo" />
       </a>
     </div>
 
+    <!-- Desktop Menu -->
     <nav class="main-navigation" aria-label="<?php esc_attr_e('Primary menu', 'practice-theme'); ?>">
       <?php wp_nav_menu($primary_menu_args); ?>
     </nav>
 
+    <!-- Mobile Menu -->
     <div class="site-menu">
-      <button class="menu-toggle menu-toggle--open"
+      <button class="menu-toggle menu-toggle-open"
         aria-expanded="false"
         aria-label="<?php echo esc_attr($label_open); ?>">
         <img src="<?php echo get_template_directory_uri() . '/dist/images/dark-burger.svg'; ?>"
@@ -43,8 +45,8 @@ $label_close = __('Close menu',  'practice-theme');
       </button>
 
       <div class="side-menu">
-        <div class="side-menu__close">
-          <button class="menu-toggle menu-toggle--close"
+        <div class="side-menu-close">
+          <button class="menu-toggle menu-toggle-close"
             aria-expanded="true"
             aria-label="<?php echo esc_attr($label_close); ?>">
             <img src="<?php echo get_template_directory_uri() . '/dist/images/exit-menu.png'; ?>"
@@ -53,7 +55,7 @@ $label_close = __('Close menu',  'practice-theme');
           </button>
         </div>
 
-        <div class="side-menu__items">
+        <div class="side-menu-items">
           <?php wp_nav_menu($primary_menu_args); ?>
         </div>
       </div>

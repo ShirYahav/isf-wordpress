@@ -21,20 +21,13 @@ function practice_theme_enqueue_assets()
 }
 add_action('wp_enqueue_scripts', 'practice_theme_enqueue_assets');
 
-
-//Temporary
-function practice_theme_rename_home_to_join_us($items, $args)
-{
-  $home_url = trailingslashit(home_url());
-
-  foreach ($items as $item) {
-    if (isset($item->url) && $item->url === $home_url) {
-      $item->title = __('Join Us >', 'practice-theme');
-      $item->classes[] = 'menu-item-join-us';
-    }
-  }
-  return $items;
-}
-add_filter('wp_nav_menu_objects', 'practice_theme_rename_home_to_join_us', 10, 2);
-
 add_filter('show_admin_bar', '__return_false');
+
+function practice_theme_register_menus() {
+  register_nav_menus( array(
+    'secondary' => __( 'Secondary Menu', 'practice-theme' ),
+  ) );
+}
+add_action( 'after_setup_theme', 'practice_theme_register_menus' );
+
+
