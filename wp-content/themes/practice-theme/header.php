@@ -39,7 +39,7 @@ $label_close = __('Close menu',  'practice-theme');
       <button class="menu-toggle menu-toggle-open"
         aria-expanded="false"
         aria-label="<?php echo esc_attr($label_open); ?>">
-        <img src="<?php echo get_template_directory_uri() . '/dist/images/dark-burger.svg'; ?>"
+        <img src="<?php echo get_template_directory_uri() . '/dist/images/header-images/dark-burger.svg'; ?>"
           alt="<?php echo esc_attr($label_open); ?>"
           class="menu-icon" />
       </button>
@@ -49,7 +49,7 @@ $label_close = __('Close menu',  'practice-theme');
           <button class="menu-toggle menu-toggle-close"
             aria-expanded="true"
             aria-label="<?php echo esc_attr($label_close); ?>">
-            <img src="<?php echo get_template_directory_uri() . '/dist/images/exit-menu.png'; ?>"
+            <img src="<?php echo get_template_directory_uri() . '/dist/images/header-images/exit-menu.png'; ?>"
               alt="<?php echo esc_attr($label_close); ?>"
               class="menu-icon" />
           </button>
