@@ -23,11 +23,11 @@ add_action('wp_enqueue_scripts', 'practice_theme_enqueue_assets');
 
 add_filter('show_admin_bar', '__return_false');
 
-function practice_theme_register_menus() {
-  register_nav_menus( array(
-    'secondary' => __( 'Secondary Menu', 'practice-theme' ),
-  ) );
+function practice_theme_register_menus()
+{
+  register_nav_menus(array(
+    'primary'   => __('Primary Menu',   'practice-theme'),
+    'secondary' => __('Secondary Menu', 'practice-theme'),
+  ));
 }
-add_action( 'after_setup_theme', 'practice_theme_register_menus' );
-
-
+add_action('after_setup_theme', 'practice_theme_register_menus');
