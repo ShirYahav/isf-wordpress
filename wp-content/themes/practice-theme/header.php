@@ -18,6 +18,7 @@ $label_close = __('Close menu',  'practice-theme');
 </head>
 
 <body <?php body_class(); ?>>
+  <canvas id="starfield"></canvas>
   <header id="site-header" class="site-header">
 
     <div class="header-logo">

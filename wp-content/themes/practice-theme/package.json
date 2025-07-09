@@ -26,6 +26,8 @@
   "dependencies": {
     "dompurify": "^3.2.6",
     "leaflet": "^1.9.4",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "three": "^0.178.0",
+    "vanta": "^0.5.24"
   }
 }

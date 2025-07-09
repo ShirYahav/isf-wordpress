@@ -1,8 +1,9 @@
-.footer-lower {
+.site-footer {
+    width: 100%;
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+}
+.footer-lower {
     z-index: 1000;
     display: flex;
     justify-content: space-around;

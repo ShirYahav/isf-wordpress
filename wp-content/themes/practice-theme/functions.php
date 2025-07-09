@@ -18,6 +18,11 @@ function practice_theme_enqueue_assets()
     filemtime($js_file),
     true
   );
+
+  wp_localize_script('practice-script', 'newsletterSettings', [
+    'ajaxUrl' => admin_url('admin-ajax.php'),
+    'nonce'   => wp_create_nonce('newsletter_signup'),
+  ]);
 }
 add_action('wp_enqueue_scripts', 'practice_theme_enqueue_assets');
 
@@ -31,3 +36,32 @@ function practice_theme_register_menus()
   ));
 }
 add_action('after_setup_theme', 'practice_theme_register_menus');
+
+require get_template_directory() . '/inc/widget-newsletter.php';
+
+// Load AJAX handler
+require get_template_directory() . '/inc/ajax-newsletter.php';
+
+// Register the footer widget area
+function practice_register_footer_widget_area()
+{
+  register_sidebar([
+    'name'          => __('Footer Newsletter', 'practice-theme'),
+    'id'            => 'footer-newsletter',
+    'description'   => __('Drag the Newsletter Signup widget here.', 'practice-theme'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+  ]);
+}
+add_action('widgets_init', 'practice_register_footer_widget_area');
+
+function practice_register_footer_credits_widget_area() {
+  register_sidebar( [
+    'name'          => __( 'Footer Credits', 'practice-theme' ),
+    'id'            => 'footer-credits',
+    'description'   => __( 'Drop your footer credit text or HTML here.', 'practice-theme' ),
+    'before_widget' => '<div id="%1$s" class="footer-credit %2$s">',
+    'after_widget'  => '</div>',
+  ] );
+}
+add_action( 'widgets_init', 'practice_register_footer_credits_widget_area' );

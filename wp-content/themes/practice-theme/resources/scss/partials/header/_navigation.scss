@@ -31,7 +31,6 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        position: relative;
 
         &::after {
           content: "";
@@ -94,7 +93,7 @@
 
     &-close {
       position: absolute;
-      top: $spacing-50;
+      top: 1.4rem;
       right: -0.3rem;
       margin-top: -0.3rem;
 
@@ -117,6 +116,7 @@
         flex-direction: column;
         text-align: end;
         line-height: 1.4;
+        list-style: none;
 
         li.menu-item {
           margin-bottom: $spacing-40;
@@ -124,9 +124,8 @@
           a {
             display: block;
             color: $color-white;
-            font-size: $font-size-normal;
+            font-size: 1.5rem;
             text-decoration: none;
-            letter-spacing: 0.05rem;
           }
         }
 
@@ -136,7 +135,6 @@
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
-          position: relative;
 
           &::after {
             content: "";

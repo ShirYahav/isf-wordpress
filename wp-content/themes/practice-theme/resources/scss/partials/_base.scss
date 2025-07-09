@@ -5,6 +5,37 @@ html {
 
 body {
     font-family: $space-grotesk;
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 0;
+    letter-spacing: 0.06rem;
+}
+
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;             // behind all other elements
+  background: #000;        // solid black base
+  display: block;
+}
+
+input {
+    padding: 1.1rem 1rem;
+    font-size: 1.5rem;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+
+button {
+    padding: 0.9rem 1rem;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    width: 34%;
+    margin-top: 0.5rem;
 }
