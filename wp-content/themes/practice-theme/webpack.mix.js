@@ -11,12 +11,12 @@ mix
 
   //live-reload during developmen
   .browserSync({
-    proxy: 'localhost:8000',     
+    proxy: 'localhost:8000',
     files: [
-      'dist/css/*.css',      
-      'dist/js/*.js',          
-      '**/*.php'                
+      'dist/css/*.css',
+      'dist/js/*.js',
+      '**/*.php'
     ],
-    injectChanges: true,     
-    open: false,      
+    injectChanges: true,
+    open: false,
   });

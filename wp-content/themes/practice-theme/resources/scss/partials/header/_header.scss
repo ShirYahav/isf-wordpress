@@ -53,7 +53,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $min-width-header-footer) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,10 +77,10 @@
         margin-right: 2.4rem;
         margin-top: 0.3rem;
 
-        > li.menu-item {
+        >li.menu-item {
           margin: 0 3rem;
 
-          > a {
+          >a {
             font-size: 1.9rem;
           }
         }
