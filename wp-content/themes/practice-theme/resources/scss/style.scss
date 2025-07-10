@@ -1,5 +1,8 @@
 @import 'partials/typography';
 @import 'partials/variables';
 @import 'partials/base';    
-@import 'partials/header';      
-@import 'partials/navigation';  
+@import 'partials/header/header';      
+@import 'partials/header/navigation';  
+@import "partials/footer/upper-footer";
+@import "partials/footer/lower-footer";
+@import "partials/footer/newsletter-signup";

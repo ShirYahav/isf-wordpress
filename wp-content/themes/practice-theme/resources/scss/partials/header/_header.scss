@@ -14,7 +14,7 @@
   .header-logo {
     a {
       display: inline-block;
-      max-height: 1000px;
+      max-height: 100rem;
     }
 
     .img-logo {
@@ -43,18 +43,17 @@
   }
 
   // mobile: transparent when open
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-header-footer-desktop) {
     &.is-menu-open {
       background-color: transparent;
 
       .header-logo {
-        position: relative;
         z-index: 1001;
       }
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-header-footer-desktop) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,12 +77,11 @@
         margin-right: 2.4rem;
         margin-top: 0.3rem;
 
-        > li.menu-item {
+        >li.menu-item {
           margin: 0 3rem;
 
-          > a {
+          >a {
             font-size: 1.9rem;
-            letter-spacing: 0.05rem;
           }
         }
       }
