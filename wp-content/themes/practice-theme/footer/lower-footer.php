@@ -1,12 +1,12 @@
-<footer class="footer-lower">
+<div class="footer-lower">
   <div class="footer-lower-powered">
     <img
       class="powered-by-img"
-      src="<?php echo esc_url(get_theme_file_uri('resources/images/footer-images/powered-by.png')); ?>"
+      src="<?php echo esc_url(get_theme_file_uri('dist/images/footer-images/powered-by.png')); ?>"
       alt="<?php echo esc_attr__('“Powered by” graphic', 'practice-theme'); ?>" />
     <img
       class="rakia-img"
-      src="<?php echo esc_url(get_theme_file_uri('resources/images/footer-images/rakia.png')); ?>"
+      src="<?php echo esc_url(get_theme_file_uri('dist/images/footer-images/rakia.png')); ?>"
       alt="<?php echo esc_attr__('Rakia logo', 'practice-theme'); ?>" />
   </div>
 
@@ -44,4 +44,4 @@
       src="<?php echo esc_url(get_theme_file_uri('dist/images/footer-images/israel-innovation.png')); ?>"
       alt="<?php echo esc_attr__('Israel Innovation Authority logo', 'practice-theme'); ?>" />
   </div>
-</footer>
+</div>

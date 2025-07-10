@@ -7,6 +7,7 @@
 </footer>
 
 <?php wp_footer(); ?>
+<canvas id="starfield"></canvas>
 </body>
 
 </html>

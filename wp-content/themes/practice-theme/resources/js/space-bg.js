@@ -1,89 +1,83 @@
-(function () {
-  const canvas = document.getElementById('starfield');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
+jQuery(function ($) {
+  const config = {
+    breakpoint: 1115,
+    largeScreenStars: 1000,
+    smallScreenStars: 500,
+    shinyPct: 0.1,
+    maxRadius: 1.0,
+    minRadius: 0.02,
+    shinyMinR: 1.5,
+    shinyMaxR: 3.5,
+    shinyMinBl: 2,
+    shinyMaxBl: 6,
+    debounceTime: 100,
+  };
 
-  let stars = [];
-  const numStars = 1000;
-  const shinyPct = 0.1;
-  const maxRadius = 1.0;
-  const minRadius = 0.02;
-  const shinyMinR = 1.5;
-  const shinyMaxR = 3.5;
-  const shinyMinBl = 2;
-  const shinyMaxBl = 6;
-  const globalSpeedFactor = 1;
-
-  // Track last scroll so we can update properly
-  let lastScrollY = window.scrollY || window.pageYOffset;
-  let ticking = false;
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    initStars();
-    render(); // draw immediately
+  function getStarCount() {
+    return $(window).width() <= config.breakpoint
+      ? config.smallScreenStars
+      : config.largeScreenStars;
   }
 
-  function initStars() {
-    stars = [];
+  function createStars(count, width, height) {
+    const stars = [];
+    const shinyCount = Math.ceil(count * config.shinyPct);
 
-    // normal stars
-    for (let i = 0; i < numStars; i++) {
-      const r = Math.pow(Math.random(), 3) * (maxRadius - minRadius) + minRadius;
+    for (let i = 0; i < count; i++) {
+      const isShiny = i < shinyCount;
+      const r = isShiny
+        ? Math.pow(Math.random(), 2) * (config.shinyMaxR - config.shinyMinR) + config.shinyMinR
+        : Math.pow(Math.random(), 3) * (config.maxRadius - config.minRadius) + config.minRadius;
+
+      const blur = isShiny
+        ? Math.random() * (config.shinyMaxBl - config.shinyMinBl) + config.shinyMinBl
+        : Math.random() * 2 + 0.5;
+
       stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r,
-        blur: Math.random() * 2 + 0.5,
-        speed: (Math.random() * 0.2 + 0.05) * globalSpeedFactor
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: r,
+        blur: blur,
       });
     }
-
-    // shiny stars
-    const shinyCount = Math.ceil(numStars * shinyPct);
-    for (let i = 0; i < shinyCount; i++) {
-      const r = Math.pow(Math.random(), 2) * (shinyMaxR - shinyMinR) + shinyMinR;
-      stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r,
-        blur: Math.random() * (shinyMaxBl - shinyMinBl) + shinyMinBl,
-        speed: (Math.random() * 0.1 + 0.02) * globalSpeedFactor
-      });
-    }
+    return stars;
   }
 
-  function render() {
-    const scrollY = window.scrollY || window.pageYOffset;
-
-    // always repaint
+  function draw(canvas, ctx, stars) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     stars.forEach(star => {
-      const y = (star.y + scrollY * star.speed) % canvas.height;
       ctx.beginPath();
-      ctx.arc(star.x, y, star.r, 0, Math.PI * 2);
+      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
       ctx.fillStyle = '#fff';
       ctx.shadowColor = '#fff';
       ctx.shadowBlur = star.blur;
       ctx.fill();
-      ctx.shadowBlur = 0;
+    });
+    ctx.shadowBlur = 0;
+  }
+
+  function setup() {
+    const $canvas = $('#starfield');
+    if (!$canvas.length) return;
+    const canvas = $canvas[0];
+    const ctx = canvas.getContext('2d');
+
+    const redraw = () => {
+      canvas.width = $(window).width();
+      canvas.height = $(window).height();
+      const starCount = getStarCount();
+      const stars = createStars(starCount, canvas.width, canvas.height);
+      draw(canvas, ctx, stars);
+    };
+
+    let resizeTimer;
+    $(window).on('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(redraw, config.debounceTime);
     });
 
-    lastScrollY = scrollY;
-    ticking = false;
+    redraw();
   }
 
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(render);
-      ticking = true;
-    }
-  }
-
-  window.addEventListener('resize', resize);
-  window.addEventListener('scroll', onScroll);
-
-  // kick things off
-  resize();
-})();
+  setup();
+});

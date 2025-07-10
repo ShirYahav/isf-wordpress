@@ -1,4 +1,4 @@
-<footer class="footer-upper">
+<div class="footer-upper">
     <div class="footer-upper-logo-powered-by">
         <div class="logo">
             <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -11,11 +11,11 @@
         <div class="powered-by">
             <img
                 class="powered-by-img"
-                src="<?php echo esc_url(get_theme_file_uri('resources/images/footer-images/powered-by.png')); ?>"
+                src="<?php echo esc_url(get_theme_file_uri('dist/images/footer-images/powered-by.png')); ?>"
                 alt="<?php echo esc_attr__('“Powered by” graphic', 'practice-theme'); ?>" />
             <img
                 class="powered-by-rakia"
-                src="<?php echo esc_url(get_theme_file_uri('resources/images/footer-images/rakia.png')); ?>"
+                src="<?php echo esc_url(get_theme_file_uri('dist/images/footer-images/rakia.png')); ?>"
                 alt="<?php echo esc_attr__('Rakia logo', 'practice-theme'); ?>" />
         </div>
     </div>
@@ -56,4 +56,4 @@
             </div>
         <?php endif; ?>
     </div>
-</footer>
+</div>

@@ -1,11 +1,11 @@
 .main-navigation {
   display: none;
 
-  @media (min-width: $min-width-header-footer) {
+  @media (min-width: $breakpoint-header-footer-desktop) {
     display: block;
     position: static;
     background: none;
-    color: white;
+    color: $color-white;
     width: auto;
     padding: 0;
 
@@ -150,7 +150,7 @@
       }
     }
 
-    @media (min-width: $min-width-header-footer) {
+    @media (min-width: $breakpoint-header-footer-desktop) {
 
       .menu-toggle-open,
       .menu-toggle-close {

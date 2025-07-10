@@ -1,12 +1,11 @@
 html {
-    height: 100vh;
     font-size: 62.5%;
 }
 
 body {
     font-family: $space-grotesk;
-    background-color: black;
-    color: white;
+    background-color: $color-black;
+    color: $color-white;
     margin: 0;
     padding: 0;
     letter-spacing: 0.06rem;
@@ -18,8 +17,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;             // behind all other elements
-  background: #000;        // solid black base
+  z-index: -1;
+  background: #000;
   display: block;
 }
 
@@ -34,7 +33,7 @@ button {
     padding: 0.9rem 1rem;
     border: 1px solid #fff;
     background: transparent;
-    color: #fff;
+    color: $color-white;
     cursor: pointer;
     width: 34%;
     margin-top: 0.5rem;

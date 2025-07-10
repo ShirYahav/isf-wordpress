@@ -15,7 +15,7 @@
     &-powered {
         display: none;
 
-        @media (min-width: $min-width-header-footer) {
+        @media (min-width: $breakpoint-header-footer-desktop) {
             display: flex;
             align-items: center;
             margin-bottom: $spacing-40;
@@ -38,7 +38,7 @@
     &-nav {
         display: none;
 
-        @media (min-width: $min-width-header-footer) {
+        @media (min-width: $breakpoint-header-footer-desktop) {
             display: flex;
 
             &-list {
@@ -76,7 +76,7 @@
             width: auto;
         }
 
-        @media (min-width: $min-width-header-footer) {
+        @media (min-width: $breakpoint-header-footer-desktop) {
             width: auto;
             flex: none;
             gap: 2rem;

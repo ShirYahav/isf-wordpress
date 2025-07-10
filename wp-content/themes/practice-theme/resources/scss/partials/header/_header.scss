@@ -43,7 +43,7 @@
   }
 
   // mobile: transparent when open
-  @media (max-width: 767px) {
+  @media (max-width: $breakpoint-header-footer-desktop) {
     &.is-menu-open {
       background-color: transparent;
 
@@ -53,7 +53,7 @@
     }
   }
 
-  @media (min-width: $min-width-header-footer) {
+  @media (min-width: $breakpoint-header-footer-desktop) {
     display: flex;
     align-items: center;
     justify-content: space-between;

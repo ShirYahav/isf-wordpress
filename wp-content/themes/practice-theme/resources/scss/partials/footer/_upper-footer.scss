@@ -10,7 +10,7 @@
         "credit";
     gap: 2rem;
 
-    @media (min-width: $min-width-header-footer) {
+    @media (min-width: $breakpoint-header-footer-desktop) {
         grid-template-columns: auto 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas:
@@ -26,7 +26,7 @@
         align-items: center;
         padding: 1.5rem 1rem;
 
-        @media (min-width: $min-width-header-footer) {
+        @media (min-width: $breakpoint-header-footer-desktop) {
             margin-left: 9rem;
             margin-bottom: -12rem;
 
@@ -35,7 +35,7 @@
         .logo .img-logo {
             width: 9rem;
 
-            @media (min-width: $min-width-header-footer) {
+            @media (min-width: $breakpoint-header-footer-desktop) {
                 width: 13rem;
             }
         }
@@ -58,7 +58,7 @@
                 height: 5rem;
             }
 
-            @media (min-width: $min-width-header-footer) {
+            @media (min-width: $breakpoint-header-footer-desktop) {
                 display: none;
             }
         }
@@ -68,7 +68,7 @@
         display: flex;
         margin-top: -3rem;
 
-        @media (min-width: $min-width-header-footer) {
+        @media (min-width: $breakpoint-header-footer-desktop) {
             justify-content: flex-end;
         }
 
@@ -80,12 +80,11 @@
 
             .newsletter-signup-heading {
                 font-size: 2.4rem;
-                color: white;
                 font-weight: 600;
                 width: 34rem;
                 margin-bottom: -0.6rem;
 
-                @media (min-width: $min-width-header-footer) {
+                @media (min-width: $breakpoint-header-footer-desktop) {
                     width: 100%;
                     font-size: 3.6rem;
                     font-weight: 500;
@@ -93,20 +92,19 @@
             }
 
             .newsletter-signup-description {
-                color: white;
                 font-size: 1.2rem;
                 width: 85%;
                 font-weight: 200;
                 margin-bottom: -2.5rem;
 
-                @media (min-width: $min-width-header-footer) {
+                @media (min-width: $breakpoint-header-footer-desktop) {
                     width: 53%;
                     font-size: 1.6rem;
 
                 }
             }
 
-            @media (min-width: $min-width-header-footer) {
+            @media (min-width: $breakpoint-header-footer-desktop) {
                 max-width: 100%;
             }
         }
@@ -120,7 +118,7 @@
         display: flex;
         justify-content: space-between;
 
-        @media (min-width: $min-width-header-footer) {
+        @media (min-width: $breakpoint-header-footer-desktop) {
             border: none;
             margin-left: 13.5rem;
             margin-top: 1rem;
@@ -137,7 +135,7 @@
 
         .footer-upper-main-menu,
         .footer-upper-secondary-menu {
-            @media (min-width: $min-width-header-footer) {
+            @media (min-width: $breakpoint-header-footer-desktop) {
                 margin-top: 4rem;
             }
 
@@ -165,7 +163,7 @@
                     font-size: 1.3rem;
                     text-decoration: none;
 
-                    @media (min-width: $min-width-header-footer) {
+                    @media (min-width: $breakpoint-header-footer-desktop) {
                         font-size: 1.5rem;
                     }
 
@@ -188,7 +186,7 @@
         color: rgba($color-white, 0.8);
         padding: 0 0 1rem 3rem;
 
-        @media (min-width: $min-width-header-footer) {
+        @media (min-width: $breakpoint-header-footer-desktop) {
             .widget_block {
                 margin-left: 10.5rem;
                 margin-bottom: 3rem;
