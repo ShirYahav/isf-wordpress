@@ -25,7 +25,7 @@ class Practice_Newsletter_Widget extends WP_Widget
             : __('Subscribe to the ISF newsletter to receive the latest announcements, opportunities, events and more.', 'practice-theme');
         printf('<p class="newsletter-signup-description">%s</p>', esc_html($desc));
 
-        get_template_part('footer/newsletter-signup');
+        get_template_part('template-parts/footer/newsletter-signup');
 
         echo $args['after_widget'];
     }

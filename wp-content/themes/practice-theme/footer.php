@@ -1,8 +1,8 @@
 <footer class="site-footer">
    <?php
-   get_template_part('footer/upper-footer');
+   get_template_part('template-parts/footer/upper-footer');
 
-   get_template_part('footer/lower-footer');
+   get_template_part('template-parts/footer/lower-footer');
    ?>
 </footer>
 
