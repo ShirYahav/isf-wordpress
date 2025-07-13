@@ -1,0 +1,16 @@
+{
+    "name": "acf/stats-stripe",
+    "title": "Stats Stripe",
+    "description": "A custom block to display a gradient stripe with key statistics.",
+    "category": "theme",
+    "icon": "chart-bar",
+    "keywords": ["stats", "stripe", "gradient", "numbers"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "stats-stripe.php"
+    },
+    "align": "full",
+    "supports": {
+        "anchor": true
+    }
+}
