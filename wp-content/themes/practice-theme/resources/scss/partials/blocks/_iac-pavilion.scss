@@ -1,12 +1,12 @@
 .iac-pavilion-block {
   display: grid;
   place-items: center;
-  padding: 4rem 3rem;
-  margin-bottom: 10rem;
+  padding: 0rem 3rem;
+  margin-bottom: 15rem;
   overflow: hidden;
 
   @media (min-width: $breakpoint-classic-desktop) {
-    padding: 8rem 2rem;
+    padding: 0rem 2rem;
   }
 
   .iac-background-text {
@@ -14,7 +14,6 @@
     z-index: 0;
     pointer-events: none;
     font-family: $wallnutt-corps;
-    font-weight: 900;
     font-size: 20rem;
     line-height: 0.8;
     background: $gradient-sunny-day-30;
@@ -55,7 +54,7 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       gap: 2rem 8rem;
-      margin-top: 29rem;
+      margin-top: 23rem;
       padding: 0 8rem;
     }
 
@@ -91,7 +90,7 @@
         .iac-headline {
           order: 3;
           font-family: $wallnutt-corps;
-          font-size: 4.5rem;
+          font-size: 4.3rem;
           font-weight: 900;
           line-height: 1.1;
           text-transform: uppercase;
