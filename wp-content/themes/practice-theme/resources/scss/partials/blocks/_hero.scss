@@ -44,28 +44,10 @@
 
 
   .hero-button {
-    width: 7rem;
-    text-align: center;
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 600;
-    border: 2px solid transparent;
-    border-image-source: $gradient-sunny-day;
-    border-image-slice: 1;
-    background: transparent;
+    @extend %btn;
 
     @media(min-width: $breakpoint-classic-desktop) {
-      font-size: 1.8rem;
-      width: 8rem;
-      padding: 1.4rem 3rem;
       margin-top: 1rem;
-    }
-
-    &:hover {
-      background: $gradient-sunny-day;
     }
   }
 }

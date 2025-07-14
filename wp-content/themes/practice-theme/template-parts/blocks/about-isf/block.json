@@ -1,0 +1,16 @@
+{
+    "name": "acf/about-isf",
+    "title": "About ISF",
+    "description": "A custom block with a headline, description, button, and background image.",
+    "style": "file:./about-isf.css",
+    "category": "formatting",
+    "icon": "align-wide",
+    "keywords": ["about", "info", "image"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "about-isf.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

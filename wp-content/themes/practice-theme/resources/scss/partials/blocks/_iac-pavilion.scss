@@ -139,25 +139,11 @@
       }
 
       .iac-button {
-        padding: 1.1rem 2.3rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: 600;
-        border: 0.2rem solid;
-        border-image-source: $gradient-sunny-day;
-        border-image-slice: 1;
-        max-width: 11rem;
+        @extend %btn;
 
         @media (min-width: $breakpoint-classic-desktop) {
           grid-column: 3;
-          padding: 2rem 3rem;
-          font-size: 1.8rem;
-          max-width: 13rem;
-          text-align: center;
-          margin-top: -15rem;
-          max-height: 2rem;
+          margin-top: -10rem;
         }
 
         &:hover {

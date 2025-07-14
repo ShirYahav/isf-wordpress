@@ -42,3 +42,28 @@ button {
     width: 34%;
     margin-top: 0.5rem;
 }
+
+%btn {
+    padding: 1.1rem 2.3rem;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 0.2rem solid;
+    border-image-source: $gradient-sunny-day;
+    border-image-slice: 1;
+    max-width: 11rem;
+    text-align: center;
+
+    @media (min-width: $breakpoint-classic-desktop) {
+        padding: 2rem 3rem;
+        font-size: 1.8rem;
+        max-width: 13rem;
+        max-height: 2rem;
+    }
+
+    &:hover {
+        background: $gradient-sunny-day;
+    }
+}
