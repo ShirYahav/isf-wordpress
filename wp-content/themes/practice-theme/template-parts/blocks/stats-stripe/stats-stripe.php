@@ -5,10 +5,6 @@ if (! empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
-if (! have_rows('stats')) {
-    return;
-}
-
 $data_provided_by = get_field('data_provided_by');
 ?>
 
