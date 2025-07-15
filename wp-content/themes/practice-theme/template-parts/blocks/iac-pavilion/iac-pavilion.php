@@ -5,11 +5,6 @@ if (! empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
-$class_name = 'iac-pavilion-block';
-if (! empty($block['className'])) {
-    $class_name .= ' ' . $block['className'];
-}
-
 $background_text_mobile = get_field('background_text_mobile');
 $background_text_desktop = get_field('background_text_desktop');
 $star_image = get_field('star_image');
@@ -17,12 +12,13 @@ $headline = get_field('headline');
 $logo = get_field('logo');
 $description = get_field('description');
 $button = get_field('button');
+
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>">
+<div id="<?php echo esc_attr($id); ?>" class="iac-pavilion-block">
 
-    <div class="iac-background-text iac-background-text--mobile" aria-hidden="true"><?php echo nl2br(esc_html($background_text_mobile)); ?></div>
-    <div class="iac-background-text iac-background-text--desktop" aria-hidden="true"><?php echo nl2br(esc_html($background_text_desktop)); ?></div>
+    <div class="iac-background-text iac-background-text-mobile" aria-hidden="true"><?php echo nl2br(esc_html($background_text_mobile)); ?></div>
+    <div class="iac-background-text iac-background-text-desktop" aria-hidden="true"><?php echo nl2br(esc_html($background_text_desktop)); ?></div>
 
     <div class="iac-content-grid">
 
@@ -44,11 +40,15 @@ $button = get_field('button');
                 <?php echo wp_kses_post($description); ?>
             </div>
 
-            <?php if ($button && !empty($button['url']) && !empty($button['title'])) : ?>
-                <a href="<?php echo esc_url($button['url']); ?>" class="iac-button" target="<?php echo esc_attr($button['target'] ?: '_self'); ?>">
-                    <?php echo esc_html($button['title']); ?>
-                </a>
-            <?php endif; ?>
+            <?php
+            if (! empty($button['url']) && ! empty($button['title'])) {
+                get_template_part(
+                    'template-parts/components/link-button',
+                    '',
+                    ['class' => 'iac-button']
+                );
+            }
+            ?>
         </div>
 
     </div>

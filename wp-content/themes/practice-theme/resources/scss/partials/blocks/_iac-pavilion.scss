@@ -24,7 +24,7 @@
     margin-top: 3rem;
   }
 
-  .iac-background-text--mobile {
+  .iac-background-text-mobile {
     transform: translateX(17rem);
 
     @media (min-width: $breakpoint-classic-desktop) {
@@ -32,7 +32,7 @@
     }
   }
 
-  .iac-background-text--desktop {
+  .iac-background-text-desktop {
     display: none;
 
     @media (min-width: $breakpoint-classic-desktop) {

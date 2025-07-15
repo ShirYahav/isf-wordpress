@@ -5,7 +5,11 @@
     "style": "file:./logo-wall.css",
     "category": "media",
     "icon": "groups",
-    "keywords": ["logo", "partners", "grid"],
+    "keywords": [
+        "logo",
+        "partners",
+        "grid"
+    ],
     "acf": {
         "mode": "preview",
         "renderTemplate": "logo-wall.php"

@@ -5,19 +5,15 @@ if (! empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
-$class_name = 'about-isf';
-if (! empty($block['className'])) {
-    $class_name .= ' ' . $block['className'];
-}
-
 $headline = get_field('headline');
 $description = get_field('description');
 $description_bold = get_field('description_bold');
 $button = get_field('button');
 $background_image = get_field('background_image');
+
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>">
+<div id="<?php echo esc_attr($id); ?>" class="about-isf">
 
     <?php if ($background_image) : ?>
         <div class="about-isf-image">
@@ -37,10 +33,14 @@ $background_image = get_field('background_image');
             </div>
         <?php endif; ?>
 
-        <?php if ($button && ! empty($button['url']) && ! empty($button['title'])) : ?>
-            <a href="<?php echo esc_url($button['url']); ?>" class="about-isf-button" target="<?php echo esc_attr($button['target'] ?: '_self'); ?>">
-                <?php echo esc_html($button['title']); ?>
-            </a>
-        <?php endif; ?>
+        <?php
+        if (! empty($button['url']) && ! empty($button['title'])) {
+            get_template_part(
+                'template-parts/components/link-button',
+                '',
+                ['class' => 'about-isf-button']
+            );
+        }
+        ?>
     </div>
 </div>

@@ -53,13 +53,13 @@ button {
     border: 0.2rem solid;
     border-image-source: $gradient-sunny-day;
     border-image-slice: 1;
-    max-width: 11rem;
+    min-width: 11rem;
+    width: fit-content;
     text-align: center;
 
     @media (min-width: $breakpoint-classic-desktop) {
         padding: 2rem 3rem;
         font-size: 1.8rem;
-        max-width: 13rem;
         max-height: 2rem;
     }
 

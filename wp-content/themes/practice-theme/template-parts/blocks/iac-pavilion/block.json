@@ -4,13 +4,17 @@
     "description": "A custom block to showcase the IAC pavilion with large background text and a call to action.",
     "category": "theme",
     "icon": "star-filled",
-    "keywords": ["iac", "pavilion", "event", "congress"],
+    "keywords": [
+        "iac",
+        "pavilion",
+        "event",
+        "congress"
+    ],
     "acf": {
         "mode": "preview",
         "renderTemplate": "iac-pavilion.php"
     },
-    "align": "full",
     "supports": {
-        "anchor": true
+        "align": false
     }
 }

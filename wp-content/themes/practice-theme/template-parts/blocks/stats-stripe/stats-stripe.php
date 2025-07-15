@@ -1,27 +1,18 @@
 <?php
 
-if (! have_rows('stats')) {
-    return;
-}
-
 $id = 'stats-stripe-' . $block['id'];
 if (! empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
-$class_name = 'stats-stripe-block';
-if (! empty($block['className'])) {
-    $class_name .= ' ' . $block['className'];
-}
-if (! empty($block['align'])) {
-    $class_name .= ' align' . $block['align'];
+if (! have_rows('stats')) {
+    return;
 }
 
 $data_provided_by = get_field('data_provided_by');
-
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>">
+<div id="<?php echo esc_attr($id); ?>" class="stats-stripe-block">
     <div class="stats-stripe-gradient-background">
         <div class="stats-stripe-container">
             <?php while (have_rows('stats')) : the_row();

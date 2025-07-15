@@ -4,10 +4,16 @@
     "description": "A custom hero block with a headline, description, and a button.",
     "category": "theme",
     "icon": "superhero-alt",
-    "keywords": ["hero", "header", "banner"],
+    "keywords": [
+        "hero",
+        "header",
+        "banner"
+    ],
     "acf": {
         "mode": "preview",
         "renderTemplate": "hero.php"
     },
-    "align": "full"
+    "supports": {
+        "align": false
+    }
 }

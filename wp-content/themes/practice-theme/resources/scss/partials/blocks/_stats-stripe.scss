@@ -48,7 +48,7 @@
       }
     }
 
-    &-number {
+    .stat-item-number {
       font-size: 6rem;
       font-weight: 300;
       line-height: 1;
@@ -58,7 +58,7 @@
       }
     }
 
-    &-sign {
+    .stat-item-sign {
       font-size: 6rem;
       margin-left: 0.1rem;
       line-height: 1;
@@ -68,7 +68,7 @@
       }
     }
 
-    &-text {
+    .stat-item-text {
       font-size: 1.5rem;
       font-weight: 300;
       margin-top: 0.8rem;

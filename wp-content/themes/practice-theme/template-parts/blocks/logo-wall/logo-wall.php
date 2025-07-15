@@ -4,17 +4,13 @@ $id = 'logo-wall-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) {
     $id = $block['anchor'];
 }
-$class_name = 'logo-wall';
-if ( ! empty( $block['className'] ) ) {
-    $class_name .= ' ' . $block['className'];
-}
 
 $headline = get_field( 'headline' );
 $logos    = get_field( 'logos' );
 
 ?>
 
-<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="logo-wall">
     <?php if ( $headline ) : ?>
         <h2 class="logo-wall-headline"><?php echo esc_html( $headline ); ?></h2>
     <?php endif; ?>
