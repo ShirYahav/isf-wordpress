@@ -1,0 +1,19 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "A custom hero block with a headline, description, and a button.",
+    "category": "theme",
+    "icon": "superhero-alt",
+    "keywords": [
+        "hero",
+        "header",
+        "banner"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

@@ -1,0 +1,54 @@
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 3rem;
+  margin-bottom: 10rem;
+
+  @media(min-width: $breakpoint-classic-desktop) {
+    width: 85%;
+    margin-left: auto;
+  }
+
+  .hero-headline {
+    font-family: $wallnutt-corps;
+    font-size: 4.7rem;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-top: 7rem;
+    margin-bottom: -0.5rem;
+
+    @media(min-width: $breakpoint-classic-desktop) {
+      max-width: 100rem;
+      font-size: 10rem;
+      margin-top: 0rem;
+    }
+
+    .hero-highlight {
+      background: $gradient-sunny-day;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .hero-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    @media(min-width: $breakpoint-classic-desktop) {
+      font-size: 1.8rem;
+      width: 50rem;
+    }
+  }
+
+
+  .hero-button {
+    @extend %btn;
+
+    @media(min-width: $breakpoint-classic-desktop) {
+      margin-top: 1rem;
+    }
+  }
+}

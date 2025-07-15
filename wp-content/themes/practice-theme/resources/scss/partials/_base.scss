@@ -12,14 +12,18 @@ body {
 }
 
 #starfield {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: #000;
-  display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: #000;
+    display: block;
+}
+
+#main-content {
+    margin-top: 8rem;
 }
 
 input {
@@ -37,4 +41,29 @@ button {
     cursor: pointer;
     width: 34%;
     margin-top: 0.5rem;
+}
+
+%btn {
+    padding: 1.1rem 2.3rem;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 0.2rem solid;
+    border-image-source: $gradient-sunny-day;
+    border-image-slice: 1;
+    min-width: 11rem;
+    width: fit-content;
+    text-align: center;
+
+    @media (min-width: $breakpoint-classic-desktop) {
+        padding: 2rem 3rem;
+        font-size: 1.8rem;
+        max-height: 2rem;
+    }
+
+    &:hover {
+        background: $gradient-sunny-day;
+    }
 }
