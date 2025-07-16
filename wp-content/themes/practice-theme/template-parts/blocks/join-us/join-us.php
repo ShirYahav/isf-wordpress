@@ -31,7 +31,7 @@ $button_text = get_field('button_text');
 
     <div class="form-wrapper">
         <form id="join-us-form-<?php echo esc_attr($block['id']); ?>" class="join-us-form" method="post">
-            <?php wp_nonce_field('join_us_form_nonce', 'security'); ?>
+            <?php wp_nonce_field('join_us_form_nonce', 'nonce'); ?>
 
             <?php
             ?>
