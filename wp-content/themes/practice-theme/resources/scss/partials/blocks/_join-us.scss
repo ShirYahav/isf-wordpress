@@ -28,6 +28,7 @@
             font-size: 1.6rem;
             line-height: 1.4;
             color: $color-black;
+
             @media (min-width: $breakpoint-classic-desktop) {
                 font-size: 1.8rem;
             }
@@ -66,6 +67,11 @@
         .form-row-phone {
             display: flex;
             gap: 1rem;
+
+            @media (min-width: $breakpoint-classic-desktop) {
+                flex-wrap: wrap;
+                gap: 0rem;
+            }
 
             .country-code-input {
                 flex: 0 0 8rem;
@@ -112,7 +118,28 @@
 
             &:hover {
                 background-color: $color-blackish-gray;
-                color: #fff;
+                color: $color-white;
+            }
+        }
+
+        input.input-error {
+            border-color: $color-vivid-red;
+        }
+
+        .error-message {
+            color: $color-vivid-red;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+            text-align: left;
+        }
+
+        .form-message {
+            color: $color-vivid-red;
+            font-size: 1.6rem;
+            margin-top: 1rem;
+
+            @media (min-width: $breakpoint-classic-desktop) {
+                grid-column: 1 / -1;
             }
         }
     }
