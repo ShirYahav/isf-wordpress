@@ -1,0 +1,145 @@
+.our-mission {
+    padding: 5rem 3rem;
+    overflow-x: hidden;
+
+    @media (min-width: $breakpoint-classic-desktop) {
+        padding: 6rem 12rem;
+    }
+
+    .our-mission-header {
+        display: grid;
+        gap: 2rem;
+        margin-bottom: 4rem;
+
+        @media (min-width: $breakpoint-1220) {
+            grid-template-columns: 1.3fr 1.5fr;
+            gap: 4rem;
+            margin-bottom: 9rem;
+        }
+    }
+
+    .our-mission-headline-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        .mission-title-icon {
+            width: 15rem;
+            height: auto;
+        }
+
+        .mission-headline {
+            font-size: 4.7rem;
+            font-family: $wallnutt-corps;
+            text-transform: uppercase;
+
+            @media (min-width: $breakpoint-classic-desktop) {
+                font-size: 7rem;
+            }
+        }
+    }
+
+    .our-mission-description {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-top: -6rem;
+        max-width: 95%;
+
+        @media (min-width: $breakpoint-1220) {
+            margin-top: 8rem;
+            max-width: 90%;
+            font-size: 1.8rem;
+        }
+    }
+
+    .mission-items-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 4rem;
+
+        @media (min-width: $breakpoint-1220) {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .mission-item {
+        width: 30rem;
+        background-color: $color-lighter-black;
+        border-radius: 0.3rem;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        mask-image: linear-gradient(to top, black 99%, transparent 99%);
+        -webkit-mask-image: linear-gradient(to top, black 99%, transparent 99%);
+
+        @media (min-width: $breakpoint-classic-desktop) {
+            width: 35rem;
+        }
+
+        .mission-item-icon-wrapper {
+            height: 27rem;
+            width: 27rem;
+            padding-top: 4rem;
+
+            .mission-item-icon {
+                width: 80%;
+                    height: 80%;
+                object-fit: contain;
+                transition: width 0.3s ease-out, height 0.3s ease-out;
+            }
+        }
+
+        .mission-item-text-content {
+            width: 100%;
+            height: 6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mission-item-headline {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            transition: margin-top 0.4s ease-out;
+            margin-top: -1.5rem;
+            padding: 0rem 1.5rem;
+
+            @media (min-width: $breakpoint-classic-desktop) {
+                font-size: 2rem;
+            }
+        }
+
+        .mission-item-description {
+            order: 2;
+            color: $color-white;
+            font-size: 1.3rem;
+            max-width: 90%;
+            line-height: 1.5;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.4s ease-out, opacity 0.2s linear;
+        }
+
+        &.is-active {
+            .mission-item-icon-wrapper .mission-item-icon {
+                width: 18rem;
+                height: 18rem;
+            }
+
+            .mission-item-headline {
+                margin-top: -8rem;
+            }
+
+            .mission-item-description {
+                opacity: 1;
+                max-height: 10rem;
+                margin-top: 0rem;
+            }
+        }
+    }
+}

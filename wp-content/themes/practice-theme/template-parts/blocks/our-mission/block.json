@@ -1,0 +1,20 @@
+{
+    "name": "acf/our-mission",
+    "title": "Our Mission",
+    "description": "A section with a headline, description, and three feature cards.",
+    "category": "theme",
+    "icon": "star-filled",
+    "keywords": [
+        "mission",
+        "vision",
+        "cards",
+        "features"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "our-mission.php"
+    },
+    "supports": {
+        "align": false
+    }
+}
