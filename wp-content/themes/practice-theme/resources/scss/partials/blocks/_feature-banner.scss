@@ -1,0 +1,41 @@
+.feature-banner {
+    display: grid;
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    padding: 2rem 3rem;
+    align-items: center;
+
+    @media(min-width: $breakpoint-classic-desktop) {
+        padding-left: 11rem;
+    }
+
+    .feature-banner-content {
+        max-width: 55rem;
+        margin-top: 3rem;
+        
+        .feature-banner-headline {
+            font-family: $wallnutt-corps;
+            text-transform: uppercase;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+
+            @media(min-width: $breakpoint-classic-desktop) {
+                font-size: 7rem;
+            }
+
+        }
+
+        .feature-banner-description {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-top: 3rem;
+
+            @media(min-width: $breakpoint-classic-desktop) {
+                font-size: 2rem;
+                margin-bottom: 7rem;
+            }
+        }
+    }
+}

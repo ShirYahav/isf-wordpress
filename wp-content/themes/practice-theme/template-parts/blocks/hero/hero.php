@@ -5,14 +5,20 @@ if (! empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
+$background_image_url = get_field('background_image');
 $headline = get_field('headline');
 $highlight_text = get_field('highlight_text');
 $description = get_field('description');
 $button = get_field('button');
 
+$inline_style = '';
+if ($background_image_url) {
+    $inline_style = "style=\"background-image: url('" . esc_url($background_image_url) . "');\"";
+}
+
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="hero-block">
+<div id="<?php echo esc_attr($id); ?>" class="hero-block" <?php echo $inline_style; ?>>
     <div class="hero-content">
         <h1 class="hero-headline">
             <?php echo esc_html($headline); ?>
