@@ -1,0 +1,20 @@
+{
+    "name": "acf/join-us",
+    "title": "Join Us Form",
+    "description": "A block with a headline, description, and a WPForms form.",
+    "category": "theme",
+    "icon": "email-alt2",
+    "keywords": [
+        "join",
+        "form",
+        "register"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "join-us.php"
+    },
+    "align": "full",
+    "supports": {
+        "align": false
+    }
+}

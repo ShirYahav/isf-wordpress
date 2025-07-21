@@ -48,9 +48,13 @@
         margin-top: -7.5rem;
 
         @media (min-width: $breakpoint-classic-desktop) {
-            font-size: 7rem;
+            font-size: 5rem;
             max-width: 100%;
-            margin-top: 1rem;
+            margin-top: 5rem;
+        }
+
+        @media(min-width: $breakpoint-1220) {
+            font-size: 7rem;
         }
     }
 
@@ -71,11 +75,16 @@
     .about-isf-button {
         @extend %btn;
         color: $color-black;
-        margin-bottom: 7rem;
+        margin-bottom: 5rem;
 
         @media (min-width: $breakpoint-classic-desktop) {
             margin-bottom: 0;
-            margin-top: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        @media(min-width: $breakpoint-1220) {
+            margin-top: 1rem;
         }
 
         &:hover {

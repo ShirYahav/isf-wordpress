@@ -24,6 +24,15 @@ function practice_theme_enqueue_assets()
         'ajaxUrl' => admin_url('admin-ajax.php'),
         'nonce'   => wp_create_nonce('newsletter_signup'),
     ]);
+
+    wp_localize_script(
+        'practice-script',
+        'joinUsAjax',
+        [
+            'ajaxUrl' => admin_url('admin-ajax.php'),
+            'nonce'   => wp_create_nonce('join_us_form_nonce'),
+        ]
+    );
 }
 add_action('wp_enqueue_scripts', 'practice_theme_enqueue_assets');
 
