@@ -1,0 +1,20 @@
+{
+    "name": "acf/meet-our-team",
+    "title": "Meet Our Team",
+    "description": "A section to display team members with photos, names, roles, and LinkedIn links.",
+    "category": "theme",
+    "icon": "groups",
+    "keywords": [
+        "team",
+        "members",
+        "people",
+        "staff"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "meet-our-team.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

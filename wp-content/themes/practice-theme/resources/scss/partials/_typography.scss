@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Wallnutt Corps';
+    src: url('../../resources/fonts/WallnuttCorps-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../../resources/fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+$wallnutt-corps: 'Wallnutt Corps', sans-serif;
+$space-grotesk: 'Space Grotesk', sans-serif;

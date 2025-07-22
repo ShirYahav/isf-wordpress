@@ -1,0 +1,20 @@
+{
+    "name": "acf/logo-wall",
+    "title": "Logo Wall",
+    "description": "A simple, reusable block with a headline and a grid of logos.",
+    "style": "file:./logo-wall.css",
+    "category": "media",
+    "icon": "groups",
+    "keywords": [
+        "logo",
+        "partners",
+        "grid"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "logo-wall.php"
+    },
+    "supports": {
+        "align": false
+    }
+}

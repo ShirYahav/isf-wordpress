@@ -1,0 +1,89 @@
+.site-footer {
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-lower {
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $gradient-sunny-day;
+    color: $color-white;
+    text-align: center;
+
+    &-powered {
+        display: none;
+
+        @media (min-width: $breakpoint-header-footer-desktop) {
+            display: flex;
+            align-items: center;
+            margin-bottom: $spacing-40;
+
+            .powered-by-img {
+                margin-left: 5rem;
+                margin-top: 1.6rem;
+                height: 2.8rem;
+            }
+
+            .rakia-img {
+                margin-left: -10rem;
+                margin-top: 2rem;
+                height: 5rem;
+                width: auto;
+            }
+        }
+    }
+
+    &-nav {
+        display: none;
+
+        @media (min-width: $breakpoint-header-footer-desktop) {
+            display: flex;
+
+            &-list {
+                display: flex;
+                margin-top: 0.1rem;
+                list-style: none;
+                padding: 0;
+                margin-top: 1.5rem;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    font-weight: 200;
+                    letter-spacing: 0.07rem;
+                }
+
+                li>a {
+                    font-size: 1.4rem;
+                    margin-left: $spacing-50;
+                }
+            }
+        }
+    }
+
+    &-partners {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 1.5rem;
+
+        img {
+            height: 2.1rem;
+            width: auto;
+        }
+
+        @media (min-width: $breakpoint-header-footer-desktop) {
+            width: auto;
+            flex: none;
+            gap: 2rem;
+
+            img {
+                height: 2.7rem;
+            }
+        }
+    }
+}

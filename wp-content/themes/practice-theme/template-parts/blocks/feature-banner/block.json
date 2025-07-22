@@ -1,0 +1,20 @@
+{
+    "name": "acf/feature-banner",
+    "title": "Feature Banner",
+    "description": "A section with a background image, headline, and description.",
+    "category": "theme",
+    "icon": "format-image",
+    "keywords": [
+        "banner",
+        "hero",
+        "image",
+        "headline"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "feature-banner.php"
+    },
+    "supports": {
+        "align": false
+    }
+}
