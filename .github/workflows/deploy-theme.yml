@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "wp-content/themes/practice-theme"
-          target: "public_html/wp-content/themes"
+          source: "wp-content/themes/practice-theme/*"
+          target: "public_html/wp-content/themes/practice-theme"
