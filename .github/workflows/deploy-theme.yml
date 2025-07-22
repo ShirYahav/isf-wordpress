@@ -16,14 +16,22 @@ jobs:
       - name: Deploy theme via rsync
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST:       ${{ secrets.SSH_HOST }}
+          SSH_PORT:       ${{ secrets.SSH_PORT }}
+          SSH_USER:       ${{ secrets.SSH_USER }}
+          REMOTE_ROOT:    "/files/domains/lightslategray-koala-907678.hostingersite.com/public_html"
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-          ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -p $SSH_PORT -H $SSH_HOST >> ~/.ssh/known_hosts
+
+          ssh -i ~/.ssh/id_rsa -p $SSH_PORT \
+            $SSH_USER@$SSH_HOST \
+            "mkdir -p \$REMOTE_ROOT/wp-content/themes/practice-theme"
 
           rsync -avz --delete \
-            -e "ssh -i ~/.ssh/id_rsa -p ${{ secrets.SSH_PORT }}" \
+            -e "ssh -i ~/.ssh/id_rsa -p $SSH_PORT" \
             wp-content/themes/practice-theme/ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/wp-content/themes/practice-theme/
+            $SSH_USER@$SSH_HOST:\$REMOTE_ROOT/wp-content/themes/practice-theme/
