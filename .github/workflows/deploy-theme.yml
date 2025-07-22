@@ -1,0 +1,25 @@
+name: Deploy Practice Theme
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-theme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Copy theme via SFTP
+        working-directory: wp-content/themes/practice-theme
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "."
+          target: "public_html/wp-content/themes/practice-theme"
